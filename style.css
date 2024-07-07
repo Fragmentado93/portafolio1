@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+/*variables*/
+:root{
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #C80036;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+/* Estilo para la imagen */
+.imagen1 {
+    height: 22.5rem; /* Tamaño de la imagen */
+    width: 50%;
+}
+
+/*colocar en cada proyecto */
+* {
+    padding: 0;
+    margin:0;
+}
+/* colocar en cada proyecto; height, box-sizing */
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario); ;
+}
+/* la margin define el arriba y abajo de todos los elementos */
+.presentacion {
+    padding: 2% 5%;
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+/* (gap) para generar espacio entre los botones*/
+.presentacion__contenido{
+    width: 50%;
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    flex-direction: column;
+    gap: 40px;
+}
+/* enlaces de google */
+.presentacion__contenido__titulo{
+    font-size: 1.625rem;
+    font-family: var(--fuente-krona);
+}
+
+.presentacion__contenido__titulo2{
+    font-size: 1.625rem;
+    font-family: var(--fuente-krona);
+}
+
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    text-align: justify;
+}
+/* (gap) para generar espacio entre los botones*/
+.presentacion_enlaces{
+    display: flex; /* coloca los cuadrados uno al lado del otro */
+    justify-content: space-between;
+    flex-direction: column; /*se posicionan verticalmente*/
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.enlaces{
+    display: flex; /*posicionar los elementos uno al lado del otro*/
+    justify-content: center;
+    gap: 10px; /*para generar espacio entre los botones*/
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario)
+}
+/* :hover hacer que cuando el cursor se posicione, este de color */
+.enlaces:hover{
+    background-color: #807d72;
+}
+
+.enlaces1{
+    display: flex; /*posicionar los elementos uno al lado del otro*/
+    justify-content: center;
+    gap: 10px; /*para generar espacio entre los botones*/
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario)
+}
+/* :hover hacer que cuando el cursor se posicione, este de color */
+.enlaces1:hover{
+    background-color: #807d72;
+}
+
+.enlaces1 img {
+    width: 50%;
+    height: auto;
+}
+
+.portada {
+    padding: 14px; /* Añade un relleno de 14 píxeles alrededor del contenido dentro del elemento con la clase .portada */
+    color: var(--color-primario); /* Establece el color del texto usando una variable CSS llamada --color-primario */
+    text-align: center; /* Centra el texto dentro del elemento con la clase .portada */
+    background-color: var(--color-terciario); /* Establece el color de fondo usando una variable CSS llamada --color-terciario */
+    font-family: var(--fuente-montserrat); /* Define la familia de fuentes del texto usando una variable CSS llamada --fuente-montserrat */
+    font-size: 0.875rem; /* Establece el tamaño de fuente del texto en 0.875 rem (relativo al tamaño de fuente del elemento padre) */
+    font-weight: bold; /* Establece el peso de la fuente como negrita */
+}
+
+.portada{
+    padding: auto; 
+}
+
+/* izquierda, arriba, abajo, derecha*/
+.header{
+    padding: 2% 0% 0% 5%; 
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;  
+}
+
+
+@media (min-width: 1200px) {
+    .imagen1 {
+        position: fixed; /* Fija la posición de la imagen */
+        top: 50%; /* Ajusta la posición vertical hacia abajo */
+        left: 66%; /* Ajusta la posición horizontal al centro */
+        transform: translate(-30%, -50%); /* Centra la imagen correctamente */
+        width: 45%; /* Cambia el ancho de la imagen */
+        height: 360px; /* Cambia el alto de la imagen */
+    }
+    .enlaces1 img {
+        width: 18%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 85%; /* Cambia el ancho de la imagen */
+        height: 450px; /* Cambia el alto de la imagen */
+    }
+
+    .enlaces1 img {
+        width: 10%;
+        height: auto;
+    }
+
+    .header_menu{
+        display: flex;
+        gap: 290px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%; /* Cambia el ancho de la imagen */
+        height: 390px; /* Cambia el alto de la imagen */
+    }
+    .enlaces1 img {
+        width: 12%;
+        height: auto;
+    }
+
+    .header_menu{
+        display: flex;
+        gap: 190px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 85%; /* Cambia el ancho de la imagen */
+        height: 300px; /* Cambia el alto de la imagen */
+    }
+    .enlaces1 img {
+        width: 15%;
+        height: auto;
+    }
+
+    .header_menu{
+        display: flex;
+        gap: 100px;
+    }
+
+    .presentacion__contenido__texto{
+        font-size: 0.9rem;
+    }
+
+    .presentacion__contenido__titulo{
+        font-size: 1.0rem;
+    }
+    
+    .presentacion__contenido__titulo2{
+        font-size: 1.0rem;
+    }
+
+    .enlaces{
+        font-size: 1.0rem;
+    }
+
+    .presentacion_enlaces_subtitulo{
+        font-size: 1.0rem;
+    }
+    
+    .enlaces1{
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 85%; /* Cambia el ancho de la imagen */
+        height: 350px; /* Cambia el alto de la imagen */
+    }
+    .enlaces1 img {
+        width: 18%;
+        height: auto;
+    }
+
+    .presentacion__contenido__texto{
+        font-size: 0.9rem;
+    }
+
+    .presentacion__contenido__titulo{
+        font-size: 1.0rem;
+    }
+    
+    .presentacion__contenido__titulo2{
+        font-size: 1.0rem;
+    }
+
+    .enlaces{
+        font-size: 1.0rem;
+    }
+
+    .presentacion_enlaces_subtitulo{
+        font-size: 1.0rem;
+    }
+    
+    .enlaces1{
+        font-size: 1.0rem;
+    }
+
+}
+
+@media (max-width: 430px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 85%; /* Cambia el ancho de la imagen */
+        height: 320px; /* Cambia el alto de la imagen */
+    }
+    
+    .enlaces img {
+        width: 16%;
+        height: auto;
+    }
+
+    .enlaces1 img {
+        width: 21%;
+        height: auto;
+    }
+
+    .enlaces{
+        width: 50%;
+        height: auto;
+    }
+
+    .enlaces1{
+        width: 50%;
+        height: auto;
+    }
+
+    .header_menu{
+        display: flex;
+        gap: 60px;
+    }
+
+    .presentacion__contenido__texto{
+        font-size: 0.9rem;
+    }
+
+    .presentacion__contenido__titulo{
+        font-size: 1.0rem;
+    }
+    
+    .presentacion__contenido__titulo2{
+        font-size: 1.0rem;
+    }
+
+    .enlaces{
+        font-size: 1.0rem;
+    }
+
+    .presentacion_enlaces_subtitulo{
+        font-size: 1.0rem;
+    }
+    
+    .enlaces1{
+        font-size: 1.0rem;
+    }
+
+}
+
+@media (max-width: 376px) {
+    
+    .header{
+        padding: 3%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .presentacion__contenido{
+        width: auto;
+    }
+
+    .imagen1 {
+        /* Aquí puedes sobrescribir las propiedades que no deseas que se apliquen */
+        position: static;  /*Cambia a posición estática o la que corresponda */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 85%; /* Cambia el ancho de la imagen */
+        height: 280px; /* Cambia el alto de la imagen */
+    }
+    
+    .enlaces img {
+        width: 12%;
+        height: auto;
+    }
+
+    .enlaces1 img {
+        width: 18%;
+        height: auto;
+    }
+    
+    .enlaces{
+        width: 50%;
+        height: auto;
+    }
+
+    .enlaces1{
+        width: 50%;
+        height: auto;
+    }
+
+    .header_menu{
+        display: flex;
+        gap: 40px;
+    }
+
+    .presentacion__contenido__texto{
+        font-size: 0.9rem;
+    }
+
+    .presentacion__contenido__titulo{
+        font-size: 1.0rem;
+    }
+    
+    .presentacion__contenido__titulo2{
+        font-size: 1.0rem;
+    }
+
+    .enlaces{
+        font-size: 1.0rem;
+    }
+
+    .presentacion_enlaces_subtitulo{
+        font-size: 1.0rem;
+    }
+    
+    .enlaces1{
+        font-size: 1.0rem;
+    }
+    
+
+}
