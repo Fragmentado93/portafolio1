@@ -156,7 +156,7 @@ body{
     text-decoration: none;  
 }
 
-
+/* cambios por cada tamaño*/
 @media (min-width: 1200px) {
     .imagen1 {
         position: fixed; /* Fija la posición de la imagen */
